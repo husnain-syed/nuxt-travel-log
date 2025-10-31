@@ -1,9 +1,11 @@
 import { int, real, sqliteTable, text } from "drizzle-orm/sqlite-core";
 
+import { user } from "./auth";
 import { location } from "./location";
 
 export const locationLog = sqliteTable("locationLog", {
   id: int().primaryKey({ autoIncrement: true }),
+  userId: int().notNull().references(() => user.id),
   name: text().notNull(),
   description: text(),
   startedAt: int().notNull(),

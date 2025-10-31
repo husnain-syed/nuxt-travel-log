@@ -8,10 +8,7 @@
         <p class="py-6">
           Keep track of your adventures around the world with Travel Log. Log your trips, share experiences, and explore new destinations all in one place.
         </p>
-        <button class="btn btn-accent">
-          Sign in with
-          <Icon name="tabler:brand-github" size="24" />
-        </button>
+        <AuthButton />
       </div>
     </div>
   </div>
